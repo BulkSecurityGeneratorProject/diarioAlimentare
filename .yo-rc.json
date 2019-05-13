@@ -35,6 +35,8 @@
     "otherModules": [],
     "enableTranslation": true,
     "nativeLanguage": "en",
-    "languages": ["en", "it"]
+    "languages": ["en", "it"],
+    "herokuAppName": "diario-alimentare",
+    "herokuDeployType": "git"
   }
 }
