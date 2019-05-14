@@ -1,0 +1,22 @@
+{
+  "diarioAlimentareApp": {
+    "alimento": {
+      "home": {
+        "title": "Alimentos",
+        "createLabel": "Genera un nuovo Alimento",
+        "createOrEditLabel": "Genera o modifica un Alimento"
+      },
+      "created": "&Egrave; stato generato un nuovo Alimento con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Alimento identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Alimento con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Alimento {{ id }}?"
+      },
+      "detail": {
+        "title": "Alimento"
+      },
+      "nome": "Nome",
+      "descrizione": "Descrizione"
+    }
+  }
+}

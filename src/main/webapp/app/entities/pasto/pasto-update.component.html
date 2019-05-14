@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-pasto-heading" jhiTranslate="diarioAlimentareApp.pasto.home.createOrEditLabel">Create or edit a Pasto</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!pasto.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="diarioAlimentareApp.pasto.data" for="field_data">Data</label>
+                    <div class="input-group">
+                        <input id="field_data" type="text" class="form-control" name="data" ngbDatepicker  #dataDp="ngbDatepicker" formControlName="data"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="diarioAlimentareApp.pasto.quantita" for="field_quantita">Quantita</label>
+                    <input type="number" class="form-control" name="quantita" id="field_quantita"
+                           formControlName="quantita"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="diarioAlimentareApp.pasto.alimento" for="field_alimento">Alimento</label>
+                    <select class="form-control" id="field_alimento" name="alimento" formControlName="alimentoId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="alimentoOption.id" *ngFor="let alimentoOption of alimentos; trackBy: trackAlimentoById">{{alimentoOption.nome}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

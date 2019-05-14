@@ -43,6 +43,8 @@ public class CacheConfiguration {
             createCache(cm, it.aguzzo.diarioalimentare.domain.User.class.getName());
             createCache(cm, it.aguzzo.diarioalimentare.domain.Authority.class.getName());
             createCache(cm, it.aguzzo.diarioalimentare.domain.User.class.getName() + ".authorities");
+            createCache(cm, it.aguzzo.diarioalimentare.domain.Pasto.class.getName());
+            createCache(cm, it.aguzzo.diarioalimentare.domain.Alimento.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,33 @@
+{
+    "name": "Pasto",
+    "fields": [
+        {
+            "fieldName": "data",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "quantita",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "alimento",
+            "otherEntityRelationshipName": "pasto",
+            "relationshipName": "alimento",
+            "otherEntityField": "nome",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190514091413",
+    "javadoc": "JHipster JDL model for diarioAlimentare",
+    "entityTableName": "pasto",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

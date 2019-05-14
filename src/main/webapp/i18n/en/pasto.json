@@ -1,0 +1,23 @@
+{
+  "diarioAlimentareApp": {
+    "pasto": {
+      "home": {
+        "title": "Pastos",
+        "createLabel": "Create a new Pasto",
+        "createOrEditLabel": "Create or edit a Pasto"
+      },
+      "created": "A new Pasto is created with identifier {{ param }}",
+      "updated": "A Pasto is updated with identifier {{ param }}",
+      "deleted": "A Pasto is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pasto {{ id }}?"
+      },
+      "detail": {
+        "title": "Pasto"
+      },
+      "data": "Data",
+      "quantita": "Quantita",
+      "alimento": "Alimento"
+    }
+  }
+}

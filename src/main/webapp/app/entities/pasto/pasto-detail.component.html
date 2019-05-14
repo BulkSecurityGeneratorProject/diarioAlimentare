@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pasto">
+            <h2><span jhiTranslate="diarioAlimentareApp.pasto.detail.title">Pasto</span> {{pasto.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="diarioAlimentareApp.pasto.data">Data</span></dt>
+                <dd>
+                    <span>{{pasto.data}}</span>
+                </dd>
+                <dt><span jhiTranslate="diarioAlimentareApp.pasto.quantita">Quantita</span></dt>
+                <dd>
+                    <span>{{pasto.quantita}}</span>
+                </dd>
+                <dt><span jhiTranslate="diarioAlimentareApp.pasto.alimento">Alimento</span></dt>
+                <dd>
+                    <div *ngIf="pasto.alimentoId">
+                        <a [routerLink]="['/alimento', pasto.alimentoId, 'view']">{{pasto.alimentoNome}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pasto', pasto.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
